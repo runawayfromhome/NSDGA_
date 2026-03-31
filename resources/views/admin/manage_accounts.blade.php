@@ -10,33 +10,10 @@
 </head>
 <body class="bg-slate-50 min-h-screen flex text-slate-900">
 
-    <aside class="w-64 bg-slate-900 text-white hidden md:flex flex-col shadow-xl">
-        <div class="p-6">
-            <h1 class="text-2xl font-bold tracking-wider text-blue-400">NSDGA</h1>
-            <p class="text-xs text-slate-400">School Management System</p>
-        </div>
 
-        <nav class="flex-1 px-4 space-y-2 mt-4">
-            <a href="#" class="flex items-center space-x-3 p-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg transition">
-                <span>👤 Manage Accounts</span>
-            </a>
-            <a href="#" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-800 text-slate-300 transition">
-                <span>📚 Student Records</span>
-            </a>
-            <a href="#" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-800 text-slate-300 transition">
-                <span>⚙️ System Settings</span>
-            </a>
-        </nav>
+     <x-admin.sidebar />    
 
-        <div class="p-4 border-t border-slate-800">
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="w-full text-left p-3 text-red-400 hover:bg-red-500/10 rounded-xl transition font-medium">
-                    🚪 Logout Account
-                </button>
-            </form>
-        </div>
-    </aside>
+       
 
     <main class="flex-1 overflow-y-auto">
         <header class="bg-white/80 backdrop-blur-md shadow-sm p-4 flex justify-between items-center sticky top-0 z-10 border-b border-slate-200">
