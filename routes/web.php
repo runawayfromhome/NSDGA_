@@ -84,6 +84,8 @@ Route::middleware(['auth', 'registrar'])->prefix('registrar')->group(function ()
     // Add your other registrar routes here (Enrollment, Student Files, Certifications)
 });
 
+});
+
 Route::middleware(['student'])->group(function () {
 
 // para sa ano to sah, for routing lang ng mga pages sah hheheehehe
@@ -207,6 +209,4 @@ Route::middleware(['student'])->group(function () {
 
     Route::post('/student/logout', [StudentLoginController::class, 'logout'])->name('student.logout');
     
-});
-
 });

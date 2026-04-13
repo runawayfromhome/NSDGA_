@@ -16,6 +16,10 @@ return Application::configure(basePath: dirname(__DIR__))
         },
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->web(append: [
+            \App\Http\Middleware\SecurityHeaders::class,
+        ]);
+
         // We put the alias inside the ONLY withMiddleware block
         $middleware->alias([
             'admin' => \App\Http\Middleware\AdminMiddleware::class,
